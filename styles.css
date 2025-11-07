@@ -1,0 +1,313 @@
+/* CSS By Joe Chacon */
+/* Imported Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Kavoon&display=swap');
+/* CSS Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* Root Variables */
+:root {
+    /* Brand Colors */
+    --teal: #4CA7C0;
+    --purple: #484FB7;
+    --lavender: #6B8FE7;
+    --yellow: #E9BB57;
+    --pink: #D9526F;
+    --darkgray: #1E1E1E;
+    --white: #ffffff;
+
+    /* Font */
+    /* h1 and h2 */
+    --heading: "Kavoon", sans-serif;
+    /* All other text */
+    --body: "Inter", sans-serif;
+
+    /* Layout */
+    --pagemax: 450px;
+    --radius: 16px;
+    --panelpad: 20px;
+}
+
+/* Page Background and base styles */
+body {
+    background: var(--lavender);
+    font-family: var(--body);
+    color: var(--darkgray);
+}
+
+/* Center column layout and style(mobile) */
+.page {
+    max-width: var(--pagemax);
+    margin: 0 auto;
+    background: var(--purple);
+}
+
+/* Content Wrapper */
+.container {
+    padding: 0 var(--panelpad);
+}
+
+/* Heading Style and Size */
+
+h1, h2 {
+    font-family: var(--heading);
+}
+
+h1 {
+    font-size: 3em;
+    color: var(--white)
+}
+
+h2 {
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 1.5em;
+}
+
+h4 {
+    font-size: 1.15em;
+}
+
+/* Header */
+.site-header {
+    text-align: center;
+    color: var(--white);
+    padding: 28px 0 18px;
+}
+
+.site-header .tagline {
+    margin-top: 18px;
+    margin-bottom: 18px;
+}
+
+/* Navigation Menu */
+.menu {
+    padding-bottom: 18px;
+}
+
+.menu .container {
+    padding: 14px 16px 20px;
+    background: var(--yellow);
+}
+
+.menu h2 {
+    font-size: 1.5em;
+    font-family: var(--body);
+    font-weight: bold;
+    font-style: italic;
+    color: var(--darkgray);
+    text-align: center;
+    text-transform: uppercase;
+    padding: 10px 0;
+    margin: 0 0 10px;
+}
+
+/* Nav menu buttons */
+.menu-list {
+    display: grid;
+    gap: 10px;
+}
+
+.menu-list a {
+    display: block;
+    text-decoration: none;
+    font-family: var(--body);
+    font-weight: bold;
+    background:var(--white);
+    color: var(--purple);
+    text-align: center;
+    padding: 12px 14px;
+    border: 2px;
+    border-radius: 8px;
+}
+
+/* Card Styling */
+
+#services h2 {
+    text-align: left;
+    color: var(--white);
+}
+
+#services h3 {
+    color: var(--yellow);
+    font-weight: bold;
+}
+
+#services h4 {
+    color: var(--purple);
+    font-weight: bold;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.section .container {
+    margin: 14px var(--panelpad);
+    padding: 18px var(--panelpad);
+    border-radius: var(--radius);
+}
+
+.card {
+    background: var(--white);
+    border: 1px solid;
+    border-radius: 12px;
+    padding: 14px;
+    margin: 12px 0;
+}
+
+/* Why choose us tiles */
+#why {
+    background: var(--pink);
+}
+#why h2 {
+    text-align: left;
+    color: var(--white);
+}
+
+.tiles {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.tiles li {
+    border: 1px;
+    border-radius: 12px;
+    padding: 16px 10px;
+    text-align: center;
+    font-weight: bold;
+
+}
+
+.tiles li:nth-child(1) {
+    background: var(--teal);
+}
+
+.tiles li:nth-child(2) {
+    background: var(--lavender);
+}
+
+.tiles li:nth-child(3) {
+    background: var(--yellow);
+}
+
+.tiles li:nth-child(4) {
+    background: var(--white);
+}
+
+/* Pricing and Table Styles */
+#pricing h2 {
+    text-align: left;
+    color: var(--white);
+   
+}
+
+#pricing h3 {
+    text-align: left;
+    color: var(--yellow);
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+table {
+    margin: 0 auto;
+    background: var(--yellow);
+    border-collapse: separate;
+    border-spacing: 2px 2px;
+    
+}
+
+thead th {
+    padding: 10px 16px;
+    font-weight: bold;
+}
+
+tbody td {
+    padding: 10px 16px;
+    background: var(--white);
+}
+
+/* Call to Action (CTA) */
+#cta {
+    background: var(--pink);
+}
+
+#cta h2 {
+    text-align: left;
+    color: var(--white);
+}
+
+#cta p {
+    color: var(--white);
+    text-align: left;
+    margin: 12px;
+}
+
+a.button {
+    display: block;
+    width: fit-content;
+    margin: 20px auto;
+    background: var(--white);
+    color: var(--darkgray);
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    padding: 16px 100px;
+    border-radius: 10px;
+    box-shadow: 6px 6px 6px rgb(0, 0, 0);
+}
+
+/* Footer */
+.site-footer {
+    color: var(--white);
+    text-align: center;
+    padding: 32px;
+}
+
+.site-footer a {
+    margin-left: 32px;
+    color: var(--white);
+}
